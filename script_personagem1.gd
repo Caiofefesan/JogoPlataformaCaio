@@ -3,6 +3,7 @@ extends CharacterBody2D
 var velocidade = 600
 var forca_pulo = 800
 var rasteira = 100
+var animation = false
 var gravidade = 50
 
 func _process(delta: float) -> void:
@@ -19,6 +20,12 @@ func _process(delta: float) -> void:
 		elif(Input.is_action_pressed("ui_down")):
 			velocity.y += rasteira
 			$AnimationPlayer.play("deslizando")
+		elif (Input.is_action_pressed("disparo")):
+			animation = true
+			$AnimationPlayer.play("atirando")
+		elif (Input.is_action_pressed("atacar")):
+			$AnimationPlayer.play("atirando")
+			
 	elif(Input.is_action_pressed("ui_right")):
 		velocity.x = velocidade
 		$Sprite2D.flip_h = false
@@ -35,7 +42,15 @@ func _process(delta: float) -> void:
 		velocity.y += rasteira
 		$AnimationPlayer.play("deslizando")
 	elif (is_on_floor()):
-		if (velocity.x == 0):
+		if (velocity.x == 0 ):
 			$AnimationPlayer.play("parado")
 	
 	move_and_slide()
+
+func disparo_faca():
+	var cena_faca = preload("res://cena_faca.tscn")
+	var objeto_faca = cena_faca.instantiate()
+	add_child(objeto_faca)
+	objeto_faca.gobal.possition
+	
+	

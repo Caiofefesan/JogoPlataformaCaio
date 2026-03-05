@@ -111,6 +111,7 @@
 [ext_resource type="Texture2D" uid="uid://bylifboie02kw" path="res://Imagens/personagem_1/Jump__007.png" id="109_77kp6"]
 [ext_resource type="Texture2D" uid="uid://mf4mpi2tl70v" path="res://Imagens/personagem_1/Jump__008.png" id="110_n5568"]
 [ext_resource type="Texture2D" uid="uid://c8oui08x13fsg" path="res://Imagens/personagem_1/Jump__009.png" id="111_i6ilu"]
+[ext_resource type="PackedScene" uid="uid://dxcic5p12pid" path="res://cena_faca.tscn" id="112_41xit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brnxj"]
 size = Vector2(97, 213.5)
@@ -325,7 +326,7 @@ script = ExtResource("1_fy7es")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1100247630]
 position = Vector2(-7.6293945e-06, 1.9999938)
 scale = Vector2(0.47066107, 0.48524958)
-texture = ExtResource("17_f0nvo")
+texture = ExtResource("15_e0m1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1994974571]
 position = Vector2(-1.5, 3)
@@ -333,3 +334,9 @@ shape = SubResource("RectangleShape2D_brnxj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D" unique_id=873118956]
 libraries/ = SubResource("AnimationLibrary_02r1r")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D" unique_id=1424797554]
+position = Vector2(127, 8)
+
+[node name="Faca" parent="." unique_id=1056109728 instance=ExtResource("112_41xit")]
+position = Vector2(127, 8)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://beqengwsaboel" path="res://icon.svg" id="1_di1oa"]
 [ext_resource type="PackedScene" uid="uid://doankxxw5xt58" path="res://cena_personagem_1.tscn" id="2_2y5kg"]
+[ext_resource type="PackedScene" uid="uid://dxcic5p12pid" path="res://cena_faca.tscn" id="3_2y5kg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_at4eu"]
 size = Vector2(1105, 36.5)
@@ -21,3 +22,5 @@ position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_at4eu")
 
 [node name="Personagem 1" parent="." unique_id=1311800892 instance=ExtResource("2_2y5kg")]
+
+[node name="Faca" parent="." unique_id=1056109728 instance=ExtResource("3_2y5kg")]
