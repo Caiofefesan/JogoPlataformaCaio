@@ -1,10 +1,11 @@
 extends Area2D
 
 var velocidade = 5
-var direcao = -1
+var direcao = 1
 
 func _process(delta: float) -> void:
-	if(direcao == 1):
+	
+	if (direcao==1): #vai para direita
 		global_position.x += velocidade
 		$Sprite2D.flip_v = false
 	else:

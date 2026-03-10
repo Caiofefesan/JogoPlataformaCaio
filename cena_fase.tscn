@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://131ui1ygw2vm"]
+
+[ext_resource type="Texture2D" uid="uid://tktwbyid266q" path="res://icon.svg" id="1_cifom"]
+[ext_resource type="PackedScene" uid="uid://cw3yn3jo66yqj" path="res://cena_personagem.tscn" id="2_5fdea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fdea"]
+size = Vector2(1220, 18)
+
+[node name="Node2D" type="Node2D" unique_id=1568690337]
+position = Vector2(-1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1312105160]
+position = Vector2(573, 609)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=816953277]
+position = Vector2(1, -6)
+scale = Vector2(9.65625, 0.203125)
+texture = ExtResource("1_cifom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1810612076]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_5fdea")
+
+[node name="Personagem" parent="." unique_id=538782947 instance=ExtResource("2_5fdea")]

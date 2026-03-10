@@ -1,22 +1,24 @@
-[gd_scene format=3 uid="uid://dxcic5p12pid"]
+[gd_scene format=3 uid="uid://iri2xhet8tlh"]
 
-[ext_resource type="Script" uid="uid://deif5y0vqosuw" path="res://script_disparo.gd" id="1_lh4h8"]
-[ext_resource type="Texture2D" uid="uid://c4yt3nmlkwog2" path="res://Imagens/personagem_1/Kunai.png" id="2_ur4x1"]
+[ext_resource type="Texture2D" uid="uid://d06ycwufjapio" path="res://Imagem/Personagem/Kunai.png" id="1_b4roo"]
+[ext_resource type="Script" uid="uid://ybv4eyescdss" path="res://script_disparo.gd" id="1_lh4h8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctbn7"]
-size = Vector2(78, 14)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur4x1"]
+size = Vector2(73, 12)
 
-[node name="Faca" type="Node2D" unique_id=1056109728]
-position = Vector2(75, 401)
+[node name="Faca" type="Node2D" unique_id=689455564]
+position = Vector2(614, 328)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1389687934]
+[node name="Area2D" type="Area2D" parent="." unique_id=1475573388]
+position = Vector2(27, -6)
 script = ExtResource("1_lh4h8")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1817977150]
-position = Vector2(9.536743e-07, 1.1205673e-05)
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1135123962]
+position = Vector2(-27.95197, 5.590392)
 rotation = 1.5707964
-scale = Vector2(0.42254323, 0.5040532)
-texture = ExtResource("2_ur4x1")
+scale = Vector2(0.47976604, 0.47976604)
+texture = ExtResource("1_b4roo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=916607585]
-shape = SubResource("RectangleShape2D_ctbn7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1162091221]
+position = Vector2(-28.5, 6)
+shape = SubResource("RectangleShape2D_ur4x1")
